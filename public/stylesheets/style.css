@@ -14,6 +14,11 @@ form {
   width: 380px;
 }
 
+#form h2 {
+  display: flex;
+  justify-content: center;
+}
+
 form label {
   color: #666;
   display: inline-block;
@@ -51,4 +56,31 @@ form button:hover {
   background: #fff;
   color: #43a3e6;
   transition: 0.3s ease background;
+}
+
+input:required:invalid, input:focus:invalid {
+  color: #dd0f0f;
+  border: 2px dashed red;
+}
+
+input:required:valid {
+  color: #29e029;
+  border: 2px solid black;
+}
+
+.error {
+  background: #f02b63;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+#logout-form {
+  display: inline;
+}
+ 
+#logout-form button {
+  width: 120px;
 }

@@ -4,14 +4,16 @@
   <form action="/signup" method="POST">
  
     <label> Username
-      <input type="text" name="username" placeholder="Introduce your username ..." />
+      <input type="text" name="username" placeholder="Introduce your username ..." required/>
     </label>
  
     <label> Password
-      <input type="password" name="password" placeholder="Introduce your password ..." />
+      <input type="password" name="password" placeholder="Introduce your password ..." required/>
     </label>
  
     <button type="submit">Create account</button>
-
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
   </form>
 </div>
